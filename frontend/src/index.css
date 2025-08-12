@@ -15,6 +15,44 @@ body{
   background-color: #101010;
 }
 @layer utilities {
+   @keyframes slide-bounce-left {
+    0% { transform: translate(-20%, 20%) scale(0.95); opacity: 0; }
+    60% { transform: translate(0, 0) scale(1.05); opacity: 1; }
+    80% { transform: translate(0, 0) scale(0.98); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+
+  @keyframes slide-bounce-right {
+    0% { transform: translate(20%, 20%) scale(0.95); opacity: 0; }
+    60% { transform: translate(0, 0) scale(1.05); opacity: 1; }
+    80% { transform: translate(0, 0) scale(0.98); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes slide-bounce-up {
+    0% { transform: translate(0, 20%) scale(0.95); opacity: 0; }
+    60% { transform: translate(0, 0) scale(1.05); opacity: 1; }
+    80% { transform: translate(0, 0) scale(0.98); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  .animate-bounce-up{
+    animation: slide-bounce-up 1s ease-out forwards;
+  }
+  .animate-slide-in-left {
+    animation: slide-bounce-left 1s ease-out forwards;
+  }
+  .animate-slide-in-right {
+    animation: slide-bounce-right 1s ease-out forwards;
+  }
+   @keyframes slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  .animate-slide {
+    animation: slide 3s linear infinite;
+  }
+  .animate-slide-slow {
+    animation: slide 6s linear infinite;
+  }
   .text-shadow {
     text-shadow: 0px 0px 8px var(--green-text);
   }
@@ -98,4 +136,27 @@ section, header, footer {
 * {
   scrollbar-width: thin; 
   scrollbar-color: var(--green-border) transparent; 
+}
+.epr-search-container{
+  border:0.5px solid #00ae90;
+  border-left: 0;
+  border-right: 0;
+}
+
+.epr-search-container input {
+  background-color: transparent !important;
+  color: var(--green-text) !important;
+  border: none !important;
+}
+
+.epr-search-container input::placeholder {
+  color: var(--green-text) !important;
+  opacity: 0.6 !important;
+}
+.epr-category-label {
+  color: var(--green-text) !important;
+}
+
+.epr-emoji-category-label {
+  background: rgba(0, 0, 0, 0.5) !important;
 }

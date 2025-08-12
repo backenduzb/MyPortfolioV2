@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
@@ -18,6 +18,7 @@ const Hero = () => {
       <div className="absolute w-48 h-48 border-l-4 border-[var(--green-border)] rotate-45 top-[60%] right-[30%] opacity-25 animate-float"></div>
       <div className="absolute w-24 h-24 border-2 border-[var(--green-border)] rounded-md top-[75%] right-[5%] animate-spin-slow opacity-40"></div>
 
+
       {/* Main Content */}
       <div className="z-10 text-center max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold text-[var(--green-text)] drop-shadow-[0_0_20px_var(--green-text)] mb-6 flex items-center justify-center gap-4">
@@ -27,7 +28,7 @@ const Hero = () => {
         </h1>
 
         <h2 className="text-4xl font-semibold text-white drop-shadow-[0_0_10px_var(--green-border)] mb-4">
-          Men Qobiljon – Fullstack Dasturchi
+          Men "Javohir" – Fullstack Dasturchi
         </h2>
 
         <p className="text-lg text-gray-300 max-w-xl mx-auto mb-8 leading-relaxed">

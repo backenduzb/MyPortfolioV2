@@ -3,7 +3,7 @@ from jose import jwt, JWTError
 
 SECRET_KEY = "vicjonni-proyekti"
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+ACCESS_TOKEN_EXPIRE_MINUTES = 10000
 
 def create_access_token(data: dict):
     to_encode = data.copy()

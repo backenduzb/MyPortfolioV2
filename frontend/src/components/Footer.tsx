@@ -35,7 +35,7 @@ function Footer() {
     ];
 
     return (
-        <footer className="h-20 bg-black bottom-0 left-0 right-0 w-full border-t border-t-[var(--green-border)] flex items-center justify-around px-4">
+        <footer className="h-20 z-50 bg-black bottom-0 left-0 right-0 w-full border-t border-t-[var(--green-border)] flex items-center justify-around px-4">
             <div className="h-full w-30 flex items-center">
                 <p className="text-white font-normal text-sm">© 2025 Javohir</p>
             </div>

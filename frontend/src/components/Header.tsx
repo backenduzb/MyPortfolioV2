@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import useAuth from "../auth/auth"
 import axios from 'axios';
+import { Ruler } from 'lucide-react';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,12 +50,16 @@ function Header() {
     localStorage.setItem("activeNavItem", label);
   };
 
-  const navItems = [
-    { label: "Bosh sahifa", router: "/" },
-    { label: "Ma'lumotnoma", router: "/about" },
-    { label: "Bog'lanish" },
+  let navItems = [
+  { label: "Bosh sahifa", router: "/" },
+  { label: "Ma'lumotnoma", router: "/about" },
+  { label: "Bog'lanish", router: "/connect" },
   ];
 
+  if (isAuthenticated){
+    navItems.push({label: "Chat", router: "/chat"});
+    navItems.push({label: "Blog", router:""});
+  }
 
 
   return (

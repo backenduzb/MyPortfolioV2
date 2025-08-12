@@ -41,3 +41,5 @@ class UserLogoutSchema(BaseModel):
 
 class TokenData(BaseModel):
     username: str | None = None
+
+User_Pydantic = pydantic_model_creator(User, name="User", exclude=("password_hash",))

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Github, Users, FolderGit2, MapPin, UserCircle, Calendar } from "lucide-react";
 
+
 const skillCategories = [
   {
     title: "Frontend",
@@ -75,9 +76,8 @@ const Skills = () => {
   }, []);
 
   if (!profile) return null;
-  const playlistId = '5wexoRET4adgrE2HMnDHWN';
   return (
-    <section id="skills" className="py-20 px-6 custom-green-bg text-white relative overflow-hidden">
+    <section id="skills" className="py-20 px-6  text-white relative overflow-hidden">
 
       <div className="neon-orb orb-green top-[10%] left-[5%] animate-pulse-slow"></div>
       <div className="neon-orb orb-cyan top-[40%] left-[50%] animate-ping"></div>
@@ -95,7 +95,7 @@ const Skills = () => {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 transition-all duration-700 ease-out transform">
-          <div className="transition-all  duration-700 ease-out transform opacity-100 translate-x-0 translate-y-0 custom-card p-8 h-100 rounded-lg bg-black bg-opacity-30 border border-l-0 border-[var(--green-border)]">
+          <div className="transition-all  duration-700 ease-out transform opacity-100 translate-x-0 translate-y-0 custom-card p-8 h-100 rounded-lg bg-black bg-opacity-30 border border-l-0 border-[var(--green-border)] shadow-[0_0_0_20px_var(--green-text)] animate-slide-in-left" style={{ clipPath: "polygon(0 0, 90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%)" }}>
             <h3 className="text-2xl font-semibold mb-6 custom-green-text text-center">
               Frontend
             </h3>
@@ -140,7 +140,9 @@ const Skills = () => {
           </div>
 
           {/* Backend */}
-          <div className="transition-all duration-700 ease-out transform opacity-100 translate-x-0 translate-y-0 custom-card p-8 h-full rounded-lg bg-black bg-opacity-30 border border-l-0 border-r-0 border-[var(--green-border)]">
+          <div className="transition-all duration-700 ease-out transform opacity-100 translate-x-0 translate-y-0 custom-card p-8 h-full rounded-lg bg-black bg-opacity-30 border border-l-0 border-r-0 border-[var(--green-border)] animate-bounce-up" style={{
+            clipPath: "polygon(0 10%, 10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%)"
+          }}>
             <h3 className="text-2xl font-semibold mb-6 custom-green-text text-center">
               Backend
             </h3>
@@ -185,7 +187,12 @@ const Skills = () => {
           </div>
 
           {/* Tools & Others */}
-          <div className="transition-all duration-700 ease-out transform opacity-100 translate-x-0 translate-y-0 custom-card p-8 h-full rounded-lg bg-black bg-opacity-30 border border-r-0 border-[var(--green-border)]">
+          <div className="transition-all duration-700 ease-out transform opacity-100 translate-x-0 translate-y-0 custom-card p-8 h-full rounded-lg bg-black bg-opacity-30 border border-r-0 border-[var(--green-border)] animate-slide-in-right" style={{
+            clipPath: "polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%)"
+          }}
+
+
+          >
             <h3 className="text-2xl font-semibold mb-6 custom-green-text text-center">
               Tools & Others
             </h3>
@@ -228,10 +235,11 @@ const Skills = () => {
               </div>
             </div>
           </div>
-            <h2 className="text-4xl md:text-5xl md:col-span-3 font-bold text-center mt-20">
-              <span className="gradient-text">Boshqalar</span>
-            </h2>
-            <div className="max-w-md w-full mx-auto p-6 mt-[50px] bg-black bg-opacity-30 rounded-lg border border-[var(--green-border)] text-white backdrop-blur-md shadow-md border-l-0">
+          <h2 className="text-4xl md:text-5xl md:col-span-3 font-bold text-center mt-20 ">
+            <span className="gradient-text">Boshqalar</span>
+          </h2>
+        
+            <div className="max-w-md w-full mx-auto p-6 mt-[50px] bg-black bg-opacity-30 rounded-lg border border-[var(--green-border)] text-white backdrop-blur-md shadow-md border-l-0 animate-slide-in-left" >
               <div className="flex items-center gap-4 mb-4">
                 <img
                   src={profile.avatar_url}
@@ -276,7 +284,7 @@ const Skills = () => {
                 )}
               </div>
             </div>
-            <div className="md:col-span-2 mt-[50px] w-full rounded-lg overflow-hidden shadow-lg border border-[var(--green-border)] bg-black bg-opacity-30 border-r-0 backdrop-blur-md">
+            <div className="md:col-span-2 mt-[50px] w-full rounded-lg overflow-hidden shadow-lg border border-[var(--green-border)] bg-black bg-opacity-30 border-r-0 backdrop-blur-md animate-slide-in-right">
               <iframe
                 title="Spotify Embed: Recommendation Playlist"
                 src="https://open.spotify.com/embed/playlist/5wexoRET4adgrE2HMnDHWN?utm_source=generator&theme=0"
@@ -287,12 +295,12 @@ const Skills = () => {
                 loading="lazy"
               />
             </div>
-
-          </div>
-
-
-
         </div>
+
+
+
+      </div>
+
 
     </section>
   );

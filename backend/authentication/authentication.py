@@ -48,8 +48,10 @@ async def login_json(user: UserLoginSchema, response: Response):
         value=token,
         httponly=True,
         max_age=1000,
-        samesite='lax'
+        samesite="None",    # Kross-domen uchun
+        domain=".frontend.com" 
     )
+
 
     return {
         "access_token": token,
@@ -67,5 +69,4 @@ async def logout(response: Response, current_user: User = Depends(get_current_us
     await current_user.save()
 
     response.delete_cookie('access_token')
-    
     return {"message": "Logged out"}
