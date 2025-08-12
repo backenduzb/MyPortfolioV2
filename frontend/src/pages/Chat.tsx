@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import EmojiPicker from "emoji-picker-react";
-import { Smile, Send, Circle, ArrowDown } from "lucide-react";
+import { Smile, Send, ArrowDown } from "lucide-react";
 import axios from "axios";
 import useAuth from "../auth/auth";
 
